@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Udemy</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> 
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
 </head>
 <body>
     <!-- NavBar -->
@@ -52,13 +55,12 @@
             <h4>Choose from 185,000 online video courses 
                 with new additions published every month</h4>
             <ul>
-                <li>Python</li>
-                <li>Exel</li>
-                <li>C++</li>
-                <li>java</li>
-                <li>Node</li>
-                <li>Drawing</li>
-                <li>Data Science</li>
+                <button class="btn active" onclick="filterSelection('python')">Python</button>
+                <button class="btn active" onclick="filterSelection('excel')">Exel</button>
+                <button class="btn active" onclick="filterSelection('java')">java</button>
+                <button class="btn active" onclick="filterSelection('node')">Node</button>
+                <button class="btn active" onclick="filterSelection('.net')">.net</button>
+                <button class="btn active" onclick="filterSelection('react')">React</button>
             </ul>
             <div class="container-courses">
                 <h1>Expand Your Career opprtunities with python</h1>
@@ -67,58 +69,53 @@
                       explicabo consectetur nisi, odit impedit alias ut sequi
                       adipisci nulla totam dolorem aliquid. Laboriosam, excepturi.</p>
                 <button>Explore Python</button>
-                <section class="container-cards">
-                    <!-- <article class="card">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRahytrwyznaMrALcXHCveJI257NFmgzasEXA&usqp=CAU" alt="subject">
-                            <h5>Learn Python: The complete python programming Course</h3>
-                            <p>jose portilla</p>
-                            <div class="rate">
-                                <span class="num-rate">6.5</span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="watch-rate">(17.954)</span>
-                            </div>
-                            <div class="price">
-                                <h5 class="price-after">$100.65</h5>
-                                <h5 class="price-before">$200.65</h5>
-                            </div>
-                    </article> -->
+                <div id="carouselExampleControlsNoTouching" class="carousel slide container" data-bs-touch="false">
+                    <div class="carousel-inner" id="carousel-box">
 
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <section class="container-cards">
+                    <!-- Filled from javaScrpit from API -->
+                    
                 </section>
                 
             </div>
         </section>
         <!-- Divider-information -->
         <div class="divider-info">
-            <div class="container">
+            <div class="container-info">
                 <div class="icon">
                     <i class="fa-solid fa-play"></i>
                 </div>
                 <p>Learn in-demand skills with over 185,544 video courses</p>
             </div>
-            <div class="container">
+            <div class="container-info">
                 <div class="icon">
                     <i class="fa-solid fa-star"></i>
                 </div>
                 <p>choose courses taught by real-world experts</p>
             </div>
-            <div class="container">
+            <div class="container-info">
                 <div class="icon">
                     <i class="fa-solid fa-infinity"></i>
                 </div>
                 <p>Learn at your own pace, with lifetime access on mobile and desktop</p>
             </div>
         </div>
-        <!-- First Section -->
+        <!-- second Section -->
         <section class="second-section">
-            <h1>Students are Viewing</h1>
-            <div class="container-courses">
-                <section class="container-cards">
-                    <article class="card">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRahytrwyznaMrALcXHCveJI257NFmgzasEXA&usqp=CAU" alt="subject">
+                    <h1>Students are Viewing</h1>
+                    <div class="row">
+                        <article class="card-box col-lg-3 col-md-4 col-sm-12 mb-2">
+                            <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRahytrwyznaMrALcXHCveJI257NFmgzasEXA&usqp=CAU" alt="subject">
                             <h5>Learn Python: The complete python programming Course</h5>
                             <p>jose portilla</p>
                             <div class="rate">
@@ -135,12 +132,114 @@
                                 <h5 class="price-before">$200.65</h5>
                             </div>
                             <button>Bestseller</button>
-                    </article>
-                
+                        </article>
+                        <article class="card-box col-lg-3 col-md-4 col-sm-12 mb-2">
+                            <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRahytrwyznaMrALcXHCveJI257NFmgzasEXA&usqp=CAU" alt="subject">
+                            <h5>Learn Python: The complete python programming Course</h5>
+                            <p>jose portilla</p>
+                            <div class="rate">
+                                <span class="num-rate">6.5</span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="watch-rate">(17.954)</span>
+                            </div>
+                            <div class="price">
+                                <h5 class="price-after">$100.65</h5>
+                                <h5 class="price-before">$200.65</h5>
+                            </div>
+                            <button>Bestseller</button>
+                        </article>
+                        <article class="card-box col-lg-3 col-md-4 col-sm-12 mb-2">
+                            <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRahytrwyznaMrALcXHCveJI257NFmgzasEXA&usqp=CAU" alt="subject">
+                            <h5>Learn Python: The complete python programming Course</h5>
+                            <p>jose portilla</p>
+                            <div class="rate">
+                                <span class="num-rate">6.5</span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="watch-rate">(17.954)</span>
+                            </div>
+                            <div class="price">
+                                <h5 class="price-after">$100.65</h5>
+                                <h5 class="price-before">$200.65</h5>
+                            </div>
+                            <button>Bestseller</button>
+                        </article>
+                        <article class="card-box col-lg-3 col-md-4 col-sm-12 mb-2">
+                            <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRahytrwyznaMrALcXHCveJI257NFmgzasEXA&usqp=CAU" alt="subject">
+                            <h5>Learn Python: The complete python programming Course</h5>
+                            <p>jose portilla</p>
+                            <div class="rate">
+                                <span class="num-rate">6.5</span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="watch-rate">(17.954)</span>
+                            </div>
+                            <div class="price">
+                                <h5 class="price-after">$100.65</h5>
+                                <h5 class="price-before">$200.65</h5>
+                            </div>
+                            <button>Bestseller</button>
+                        </article>
+                    </div>
             </div>
+        </section>
+        <!-- Categories -->
+        <section class="categories">
+            <h1>Top categories</h1>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card-box">
+                        <img src="images/lohp-category-business-v2.jpg" class="img-fluid" alt="category">
+                        <h3 class="m-2">Bussiness</h3>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card-box">
+                        <img src="images/lohp-category-music-v2.jpg" class="img-fluid" alt="Music">
+                        <h3 class="m-2">Music</h3>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card-box">
+                        <img src="images/lohp-category-it-and-software-v2.jpg" class="img-fluid" alt="Software">
+                        <h3 class="m-2">Software</h3>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card-box">
+                        <img src="images/lohp-category-development-v2.jpg" class="img-fluid" alt="Development">
+                        <h3 class="m-2">Development</h3>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card-box">
+                        <img src="images/lohp-category-design-v2.jpg" class="img-fluid" alt="Design">
+                        <h3 class="m-2">Design</h3>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card-box">
+                        <img src="images/lohp-category-marketing-v2.jpg"  alt="Marketing">
+                        <h3 class="m-2">Marketing</h3>
+                    </div>
+                </div>
+            </div>
+
         </section>
     </main>
     <!-- import font awesome -->
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/55bab68d00.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>

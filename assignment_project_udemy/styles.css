@@ -119,6 +119,10 @@ nav .services .nav-icon:hover{
     background-color: var(--lightgrey);
     cursor: pointer;
 }
+nav h4{
+    font-size: 20px;
+    margin: 0;
+}
 /***************** body *******************/
 .container-body{
     margin: 0px 180px;
@@ -158,11 +162,16 @@ nav .services .nav-icon:hover{
     margin-left: 0px;
     padding-left: 0;
 }
-.container-body .first-section ul li{
+.container-body .first-section ul button{
     display: inline-block;
     margin-right: 10px;
     font-size: 18x;
     font-weight: bold;
+    border: none;
+    background:none;
+}
+.container-body .first-section ul button:hover{
+    background-color: var(--lightgrey);
 }
 .container-body .first-section .container-courses{
     padding: 32px;
@@ -181,84 +190,80 @@ nav .services .nav-icon:hover{
 .container-body .first-section .container-courses button:hover{
     background-color: var(--blue);
     color: var(--white);
-    cursor: pointer;   
+    cursor: pointer;
 }
 /* card desgin */
-.container-body .first-section .container-courses .container-cards,
-.container-body .second-section .container-courses .container-cards{
-   width: 100%;
-   display: flex;
-   gap: 15px;
-   flex-wrap: wrap;
-   /* justify-content: space-between; */
-   align-items: center;
-}
-
-.container-body .first-section .container-courses .container-cards article,
-.container-body .second-section .container-courses .container-cards article{
-    width: 350px;
-    margin-bottom: 10px;
-}
-
-.container-body .first-section .container-courses .container-cards article img,
-.container-body .second-section .container-courses .container-cards article img{
-    width: 100%;
-}
-
-.container-body .first-section .container-courses .container-cards article h5,
-.container-body .second-section .container-courses .container-cards article h5{
-    margin: 10px 0px;
+.container-body .first-section .container-courses .card-box img,
+.container-body .second-section .card-box img{
+    height: 150px;
+} 
+.container-body .first-section .container-courses .card-box h5,
+.container-body .second-section .card-box h5{
+    margin: 5px 0px;
     font-weight: bold;
     font-size: 18px;
 }
-.container-body .first-section .container-courses .container-cards article p,
-.container-body .second-section .container-courses .container-cards article p{
-    margin: 10px 0px;
+.container-body .first-section .container-courses .card-box p,
+.container-body .second-section .card-box p{
+    margin: 5px 0px;
     color: var(--grey);
 }
-.container-body .first-section .container-courses .container-cards article .num-rate, .checked,
-.container-body .second-section .container-courses .container-cards article .num-rate, .checked{
+.container-body .first-section .container-courses .card-box .num-rate, .checked,
+.container-body .second-section .card-box .num-rate, .checked{
     font-weight: bold;
-    font-size: 18px;;
+    font-size: 18px;
     color: var(--orange);
 }
-.container-body .first-section .container-courses .container-cards article .watch-rate,
-.container-body .second-section .container-courses .container-cards article .watch-rate{
+.container-body .first-section .container-courses .card-box .watch-rate,
+.container-body .second-section .card-box .watch-rate{
     color: var(--grey);
 }
-.container-body .first-section .container-courses .container-cards article .price,
-.container-body .second-section .container-courses .container-cards article .price{
+.container-body .first-section .container-courses .card-box .price,
+.container-body .second-section .card-box .price{
     display: flex;
     gap: 10px;
     align-items: center;
 }
-.container-body .first-section .container-courses .container-cards article .price .price-after,
-.container-body .second-section .container-courses .container-cards article .price .price-after{
-    font-weight: 800;
-    font-size: 19px;
-    margin: 0;
+.container-body .first-section .container-courses .card-box .price .price-after,
+.container-body .second-section .card-box .price .price-after{
+    font-weight: bold;
+    font-size: 20px;
     align-items: center;
 }
-.container-body .first-section .container-courses .container-cards article .price .price-before,
-.container-body .second-section .container-courses .container-cards article .price .price-before{
+.container-body .first-section .container-courses .card-box .price .price-before,
+.container-body .second-section .card-box .price .price-before{
     color: var(--grey);
-    margin: 0;
+    font-size: 15px;
     align-items: center;
+    text-decoration: line-through;
+}
+.carousel-control-prev,
+.carousel-control-next{
+    border-radius: 50%;
+    top: 50% !important;
+    width: 50px !important;
+    height: 50px !important;
+    background: var(--black) !important;
+    font-weight: bold;
 }
 /****************** divider-information ********************/
+.container-body .container-info{
+    padding: 0;
+}
 .container-body .divider-info{
     margin: 40px 0px;
     display: flex;
     gap: 80px;
     flex-wrap: wrap;
+    padding: 0;
 }
-.container-body .divider-info .container{
+.container-body .divider-info .container-info{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
-.container-body .divider-info .container .icon{
+.container-body .divider-info .container-info .icon{
     background: var(--lightgrey);
     height: 50px;
     width: 50px;
@@ -269,7 +274,7 @@ nav .services .nav-icon:hover{
     margin-right: 5px;
     
 }
-.container-body .divider-info .container .icon i{
+.container-body .divider-info .container-info .icon i{
     justify-content: center;
     align-items: center;
 }
@@ -278,7 +283,7 @@ nav .services .nav-icon:hover{
 .container-body .second-section{
     margin: 50px 0px;
 }
-.container-body .second-section .container-courses .container-cards article button{
+.container-body .second-section article button{
     background: var(--yellow);
     border: none;
     margin-top: 5px;
@@ -344,7 +349,7 @@ nav .services .nav-icon:hover{
     }
 
 }
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 1000px){
 	/*Big smartphones [426px -> 600px]*/
     .container-body{
         margin: 0px 50px;
@@ -359,13 +364,9 @@ nav .services .nav-icon:hover{
     nav .container-search{
         display: none;
     }
-    nav img{
-       
-    }
     nav .menu {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
 }
