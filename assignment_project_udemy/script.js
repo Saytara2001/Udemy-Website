@@ -79,8 +79,8 @@ CLICK_SEARCH.addEventListener('click', function (e){
     e.preventDefault();
 
 	var filter = INPUT_SEARCH.value.toUpperCase();
-	var searchItems = document.querySelectorAll('.card');
-	var searchItemsTexts = document.querySelectorAll('.card h5')
+	var searchItems = document.querySelectorAll('.card-box');
+	var searchItemsTexts = document.querySelectorAll('.card-box h5')
     console.log(searchItems.length);
 	for (i = 0; i < searchItems.length; i++) {
 	    if (searchItemsTexts[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
